@@ -35,7 +35,7 @@ public class DuplicateEli {
                 System.out.println(e);
             }
 
-            printUserInput();
+            printUniqueNumbers();
         }
         counter++;
 
@@ -51,36 +51,42 @@ public class DuplicateEli {
         return true;
     }
 
-    private static void printUserInput() {
+    private static void printUniqueNumbers() {
+
+        System.out.printf("\n Unique values: \n");
 
         System.out.print(myArray[0] + " ");
 
-        System.out.printf("\nUnique values:\n");
 
         int unique = 0;
         for (int j = 0; j < myArray.length; j++) {
 
             if (myArray[j] > 0) {
-                for (int i = myArray.length - 1; i >= 0; i--) {
+                for (int i = j - 1; i >= 0; i--) {
                     if (myArray[j] == myArray[i]) {
                         unique = 0;
-                    } else {
+                        break;
+                    }
+                    else {
                         unique = myArray[j];
                     }
                 }
-                if (unique > 0) {
-                    System.out.print(unique);
-                }
 
-            } else {
-                continue;
+            if (unique > 0) {
+                System.out.print(unique + " ");
             }
 
+        }
+        else{
+            continue;
+        }
+    }
+        System.out.println();
 
         }
-        System.out.println();
+
     }
 
-}
+
 
 
