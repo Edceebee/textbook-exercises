@@ -64,6 +64,10 @@ package chapter3;
 		}
 
 		public double getInvoiceAmount () {
+			if (quantityPurchased < 0)
+				quantityPurchased = 0;
+			if (pricePerItem < 0)
+				pricePerItem = 0;
 			double invoiceAmount;
 			invoiceAmount = quantityPurchased * pricePerItem;
 			return invoiceAmount;

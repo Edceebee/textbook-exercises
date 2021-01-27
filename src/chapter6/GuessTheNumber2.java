@@ -20,6 +20,7 @@ public class GuessTheNumber2 {
 
             if (userInput == randomNumber) {
                 System.out.println("You are correct");
+                break;
             } else {
                 System.out.println("Incorrect Answer");
             }
@@ -31,20 +32,23 @@ public class GuessTheNumber2 {
             if (userInput > randomNumber) {
                 System.out.println("input is less than the secret number");
             }
-            while (userInput != -1) {
+
+          while (userInput != -1) {
+
 
                 System.out.println("Enter random number between 1 - 10, or -1 to quit");
                 userInput = input.nextInt();
 
                 if (userInput == randomNumber) {
                     System.out.println("You are correct");
+                    break;
                 } else {
                     System.out.println("Incorrect Answer");
                 }
 
                 if (userInput < randomNumber) {
                     System.out.println("input is greater than the secret answer");
-                }
+               }
 
                 if (userInput > randomNumber) {
                     System.out.println("input is lesser than the secret number");
@@ -54,7 +58,7 @@ public class GuessTheNumber2 {
                 }
 
 
-            }
+           }
 
 
         }

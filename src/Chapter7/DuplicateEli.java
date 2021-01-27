@@ -21,9 +21,9 @@ public class DuplicateEli {
             System.out.println("Enter number between 10 - 100: ");
             int number = input.nextInt();
 
-            if (number < 10 || number > 100)
+            if (number < 10 && number > 100)
                 continue;
-            ;
+
 
             if (isUnique(number))
                 System.out.print("number is unique:" + " " + number);

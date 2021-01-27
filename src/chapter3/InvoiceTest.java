@@ -18,11 +18,11 @@ import java.util.Scanner;
 		Scanner input = new Scanner(System.in);
 
 
- 		 System.out.println("Enter Invoice number"); 				  // prompt
-		 newInvoice.setNumber(input.nextInt());
+ 		// System.out.println("Enter Invoice number"); 				  // prompt
+		 //newInvoice.setNumber(input.nextInt());
 
-		 System.out.println("Enter Invoice description");
-		newInvoice.setDescription(input.nextLine());
+		// System.out.println("Enter Invoice description");
+		//newInvoice.setDescription(input.next());
 
 		System.out.println("Enter Invoice quantityPurchased");
 		newInvoice.setQuantityPurchased(input.nextInt());
