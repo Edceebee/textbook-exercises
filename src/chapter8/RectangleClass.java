@@ -11,6 +11,7 @@ public class RectangleClass {
     private float length;
     private int width;
 
+
     public void RectangleClass(float length, int width) {
 
 
