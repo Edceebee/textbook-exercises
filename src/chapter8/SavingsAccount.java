@@ -1,6 +1,7 @@
 package chapter8;
 
-/* (Savings Account Class) Create class SavingsAccount. Use a static variable annualInterestRate
+
+/*(Savings Account Class) Create class SavingsAccount. Use a static variable annualInterestRate
         to store the annual interest rate for all account holders. Each object of the class contains a
         private instance variable savingsBalance indicating the amount the saver currently has on deposit.
         Provide method calculateMonthlyInterest to calculate the monthly interest by multiplying the
@@ -12,6 +13,39 @@ package chapter8;
         both savers. Next, set the annualInterestRate to 5%, calculate the next month’s interest and print
         the new balances for both savers */
 
-public class SavingsAccountClass {
-    
+
+public class SavingsAccount {
+
+    private double savingBalance;
+    static  private double annualInterestRate;
+
+    public SavingsAccount(double savingBalance) {
+        this.savingBalance = savingBalance;
+
+    }
+
+    public double getSavingBalance() {
+        return savingBalance;
+    }
+
+    public void setSavingBalance(int savingBalance) {
+        this.savingBalance = savingBalance;
+    }
+
+    public static double getAnnualInterest() {
+        return annualInterestRate;
+    }
+
+    public static void setAnnualInterest(int annualInterest) {
+        SavingsAccount.annualInterestRate = annualInterest;
+    }
+
+    public double calculateMonthlyInterest(){
+            double monthlyInterest = ((savingBalance * 0.05) / 12) + savingBalance;
+            return  monthlyInterest;
+        }
+
+
 }
+
+
