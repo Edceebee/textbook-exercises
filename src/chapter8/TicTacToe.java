@@ -82,25 +82,24 @@ public class TicTacToe {
                     System.out.print("Enter a column number (0, 1, or 2): ");
                     col = input.nextInt();
 
-                    //Check if the row and col are 0, 1, or 2
+
                     if(row < 0 || col < 0 || row > 2 || col > 2) {
                         System.out.println("This position is off the bounds of the board! Try again.");
 
-                        //Check if the position on the board the user entered is empty (has a -) or not
                     } else if(board[row][col] != '-') {
                         System.out.println("Someone has already made a move at this position! Try again.");
 
-                        //Otherwise, the position is valid so break out of the while loop
+
                     } else {
                         break;
                     }
 
                 }
 
-                //Set the position on the board at row, col to c
+
                 board[row][col] = c;
 
-                //Check to see if either player has won
+
                 if(playerHasWon(board) == 'x') {
                     System.out.println(p1 + " has won!");
                     gameEnded = true;
@@ -109,12 +108,12 @@ public class TicTacToe {
                     gameEnded = true;
                 } else {
 
-                    //If neither player has won, check to see if there has been a tie (if the board is full)
+
                     if(boardIsFull(board)) {
                         System.out.println("It's a tie!");
                         gameEnded = true;
                     } else {
-                        //If player1 is true, make it false, and vice versa; this way, the players alternate each turn
+
                         player1 = !player1;
                     }
 
@@ -127,15 +126,15 @@ public class TicTacToe {
 
         }
 
-        //Make a function to draw the tic tac toe board
-        public static void drawBoard(char[][] board) {
+
+        public static void drawBoard(char[][] board) { // method to draw the board
             System.out.println("Board:");
             for(int i = 0; i < 3; i++) {
-                //The inner for loop prints out each row of the board
+
                 for(int j = 0; j < 3; j++) {
                     System.out.print(board[i][j]);
                 }
-                //This print statement makes a new line so that each row is on a separate line
+
                 System.out.println();
             }
         }
@@ -165,12 +164,12 @@ public class TicTacToe {
                 return board[2][0];
             }
 
-            //Otherwise nobody has not won yet
+
             return ' ';
 
         }
 
-        //Make a function to check if all of the positions on the board have been filled
+        //Method to check if all of the positions on the board have been filled
         public static boolean boardIsFull(char[][] board) {
             for(int i = 0; i < 3; i++) {
                 for(int j = 0; j < 3; j++) {
