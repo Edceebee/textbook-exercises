@@ -21,7 +21,8 @@ public class DuplicateEli {
             System.out.println("Enter number between 10 - 100: ");
             int number = input.nextInt();
 
-            if (number < 10 && number > 100)
+            if (number < 10 || number > 100)
+
                 continue;
 
 
@@ -44,16 +45,16 @@ public class DuplicateEli {
 
     private static boolean isUnique(int number) {
         for (int i = 0; i < myArray.length; i++) {
-            if (myArray[i] == number) {
+            if (myArray[i] == number)
                 return true;
-            }
+
         }
         return true;
     }
 
     private static void printUniqueNumbers() {
 
-        System.out.printf("\n Unique values: \n");
+        System.out.printf("\nUnique values:\n");
 
         System.out.print(myArray[0] + " ");
 
@@ -72,9 +73,9 @@ public class DuplicateEli {
                     }
                 }
 
-            if (unique > 0) {
+            if (unique > 0)
                 System.out.print(unique + " ");
-            }
+
 
         }
         else{

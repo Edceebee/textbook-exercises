@@ -1,4 +1,4 @@
-package Exercises;// Write an application that reads two integers, determines whether the first is a multiple of the second and prints the result.
+package chapter2;// Write an application that reads two integers, determines whether the first is a multiple of the second and prints the result.
 
 	import javax.swing.*;
 

@@ -22,6 +22,7 @@ public class SavingsAccount {
     public SavingsAccount(double savingBalance) {
         this.savingBalance = savingBalance;
 
+
     }
 
     public double getSavingBalance() {
@@ -41,11 +42,17 @@ public class SavingsAccount {
     }
 
     public double calculateMonthlyInterest(){
-            double monthlyInterest = ((savingBalance * 0.05) / 12) + savingBalance;
+
+        double monthlyInterest = (savingBalance * (SavingsAccount.modifyInterest())) / 12;
             return  monthlyInterest;
         }
 
+        public static double modifyInterest(){
+        annualInterestRate = 0.04;
+          return   annualInterestRate;
+        }
 
-}
+
+    }
 
 
