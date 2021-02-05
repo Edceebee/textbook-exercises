@@ -28,17 +28,16 @@ public class TicTacToe {
 
         public static void main(String[] args) {
 
-            //Create a 3x3 array that represents our tic tac toe board
             char[][] board = new char[3][3];
 
-            //Initialize our board with dashes (empty positions)
+
             for(int i = 0; i < 3; i++) {
                 for(int j = 0; j < 3; j++) {
                     board[i][j] = '-';
                 }
             }
 
-            //Create a Scanner and ask the players for their names
+
             Scanner input = new Scanner(System.in);
             System.out.println("Let's play Tic Tac Toe!\n Player 1, what is your name? ");
 
@@ -46,7 +45,6 @@ public class TicTacToe {
             System.out.print("Player 2, what is your name? ");
             String p2 = input.nextLine();
 
-            //Create a player1 boolean that is true if it is player 1's turn and false if it is player 2's turn
             boolean player1 = true;
 
             //Create a gameEnded boolean and use it as the condition in the while loop
@@ -56,7 +54,7 @@ public class TicTacToe {
                 //Draw the board
                 drawBoard(board);
 
-                //Print whose turn it is
+
                 if(player1) {
                     System.out.println(p1 + "'s Turn (x):");
                 } else {
@@ -75,10 +73,10 @@ public class TicTacToe {
                 int row = 0;
                 int col = 0;
 
-                //Only break out of the while loop once the user enters a valid position
+
                 while(true) {
 
-                    //Ask the user for what position they want to place their x or o
+
                     System.out.print("Enter a row number (0, 1, or 2): ");
                     row = input.nextInt();
                     System.out.print("Enter a column number (0, 1, or 2): ");
