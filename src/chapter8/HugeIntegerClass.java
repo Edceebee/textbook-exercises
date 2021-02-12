@@ -9,40 +9,28 @@ package chapter8;
         holds between the two HugeInteger objects and returns false if the relationship does not hold. Provide
         a predicate method isZero. If you feel ambitious, also provide methods multiply, divide and
         remainder. */
+        class HugeInteger {
 
-
-
-    class HugeInteger {
-
-        private int[] value;
-
-       public HugeInteger(String s) {
-            super();
-            parse(s);
-        }
-
-        public HugeInteger() {
-
-        }
-
-        public void parse(String s) {
-            //read s and check if it's a valid array of x<=40 digits
-        }
-
-        public String toString() {
-            //return the contents of int[] value as a readable String
-            return null;
-        }
-
-        public HugeInteger add(HugeInteger hi) {
-            //return the sum of this object and hi
-            return null;
-        }
-
-        public HugeInteger subtract(HugeInteger hi) {
-            //return the difference between this object and hi
-            return null;
-        }
+//        private int[] array = new int[40];
+//
+//        public void parse(String s) {
+//
+//        }
+//
+//        public String toString() {
+//            //return the contents of int[] value as a readable String
+//            return null;
+//        }
+//
+//        public void add(HugeInteger hi) {
+//            //return the sum of this object and hi
+//
+//        }
+//
+//        public void subtract(HugeInteger hi) {
+//            //return the difference between this object and hi
+//
+//        }
 
 
     }

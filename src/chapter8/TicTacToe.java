@@ -70,13 +70,27 @@ public class TicTacToe {
 
             int row = 0;
             int col = 0;
+            int position;
 
             while(true) {
+                System.out.print("Enter a row number (any number from 1-9 to \n choose a position to play on): ");
+                position = input.nextInt();
 
-                System.out.print("Enter a row number (0, 1, or 2): ");
-                row = input.nextInt();
-               System.out.print("Enter a column number (0, 1, or 2): ");
-                col = input.nextInt();
+                switch (position){
+                    case 1 -> board[0][0] = c;
+                    case 2-> board[0][1] = c;
+                    case 3 -> board[0][2] =c;
+                    case 4 -> board[1][0] = c;
+                    case 5-> board[1][1] = c;
+                    case 6 -> board[1][2] =c;
+                    case 7 -> board[2][0] = c;
+                    case 8-> board[2][1] = c;
+                    case 9 -> board[2][2] =c;
+                }
+//                System.out.print("Enter a row number (0, 1, or 2): ");
+//                row = input.nextInt();
+//               System.out.print("Enter a column number (0, 1, or 2): ");
+//                col = input.nextInt();
 
                 if(row < 0 || col < 0 || row > 2 || col > 2) {
                     System.out.println("This position is off the bounds of the board! Try again.");
