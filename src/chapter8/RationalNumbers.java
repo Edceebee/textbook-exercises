@@ -25,5 +25,36 @@ number of digits of precision to the right of the decimal point.) */
 
 
 public class RationalNumbers {
+    private int numerator;
+    private int denominator;
+
+    public RationalNumbers(int numerator, int denominator) {
+        this.numerator = numerator;
+        this.denominator = denominator;
+    }
+    public RationalNumbers(){}
+
+    public int getNumerator() {
+        return numerator;
+    }
+
+    public void setNumerator(int numerator) {
+        this.numerator = numerator;
+    }
+
+    public int getDenominator() {
+        return denominator;
+    }
+
+    public void setDenominator(int denominator) {
+        this.denominator = denominator;
+    }
+
+    public int convertToRationalNumber(int numerator, int denominator){
+        int rational = numerator / denominator;
+        System.out.println("rational number is: " + rational);
+        return rational;
+    }
+
 
 }
