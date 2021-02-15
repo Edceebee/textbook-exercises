@@ -32,7 +32,9 @@ public class RationalNumbers {
         this.numerator = numerator;
         this.denominator = denominator;
     }
-    public RationalNumbers(){}
+
+    public RationalNumbers() {
+    }
 
     public int getNumerator() {
         return numerator;
@@ -50,11 +52,37 @@ public class RationalNumbers {
         this.denominator = denominator;
     }
 
-    public int convertToRationalNumber(int numerator, int denominator){
-        int rational = numerator / denominator;
-        System.out.println("rational number is: " + rational);
+    public String convertToRationalNumber(int numerator, int denominator) {
+        String rational = numerator + "/" + denominator;
+        //System.out.println("Rational number is: " + rational);
         return rational;
     }
 
+
+    public  int findLCMOfDenominator( int denominator1, int denominator2, int numerator1, int numerator2) {
+
+        int max;
+        int step;
+        int lcm = 0;
+
+        if (denominator1 > denominator2) {
+            max = step = denominator1;
+        } else {
+            max = step = denominator2;
+        }
+
+        while (denominator1 != 0) {
+            if (max % denominator1 == 0 && max % denominator2 == 0) {
+                lcm = max;
+
+                break;
+            }
+           // int total = (lcm / denominator1 * numerator1) + (lcm / denominator2 * numerator2);
+            max += step;
+        }
+        int total = (lcm / denominator1 * numerator1) + (lcm / denominator2 * numerator2);
+
+        return total;
+    }
 
 }
