@@ -22,7 +22,6 @@ package chapter8;
          */
 
 
-
 import java.util.Scanner;
 
 public class TicTacToe {
@@ -31,8 +30,8 @@ public class TicTacToe {
 
         char[][] board = new char[3][3];
 
-                for(int i = 0; i < 3; i++) {
-            for(int j = 0; j < 3; j++) {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
                 board[i][j] = '-';
             }
         }
@@ -49,19 +48,19 @@ public class TicTacToe {
         boolean player1 = true;
 
         boolean gameEnded = false;
-        while(!gameEnded) {
+        while (!gameEnded) {
 
             drawBoard(board);
 
 
-            if(player1) {
+            if (player1) {
                 System.out.println(p1 + "'s Turn (x):");
             } else {
                 System.out.println(p2 + "'s Turn (o):");
             }
 
             char c = '-';
-            if(player1) {
+            if (player1) {
                 c = 'x';
             } else {
                 c = 'o';
@@ -72,31 +71,31 @@ public class TicTacToe {
             int col = 0;
             int position;
 
-            while(true) {
+            while (true) {
                 System.out.print("Enter a row number (any number from 1-9 to \n choose a position to play on): ");
                 position = input.nextInt();
 
-                switch (position){
+                switch (position) {
                     case 1 -> board[0][0] = c;
-                    case 2-> board[0][1] = c;
-                    case 3 -> board[0][2] =c;
+                    case 2 -> board[0][1] = c;
+                    case 3 -> board[0][2] = c;
                     case 4 -> board[1][0] = c;
-                    case 5-> board[1][1] = c;
-                    case 6 -> board[1][2] =c;
+                    case 5 -> board[1][1] = c;
+                    case 6 -> board[1][2] = c;
                     case 7 -> board[2][0] = c;
-                    case 8-> board[2][1] = c;
-                    case 9 -> board[2][2] =c;
+                    case 8 -> board[2][1] = c;
+                    case 9 -> board[2][2] = c;
                 }
 //                System.out.print("Enter a row number (0, 1, or 2): ");
 //                row = input.nextInt();
 //               System.out.print("Enter a column number (0, 1, or 2): ");
 //                col = input.nextInt();
 
-                if(row < 0 || col < 0 || row > 2 || col > 2) {
+                if (row < 0 || col < 0 || row > 2 || col > 2) {
                     System.out.println("This position is off the bounds of the board! Try again.");
 
 
-                } else if(board[row][col] != '-') {
+                } else if (board[row][col] != '-') {
                     System.out.println("Someone has already made a move at this position! Try again.");
 
 
@@ -108,15 +107,15 @@ public class TicTacToe {
 
             board[row][col] = c;
 
-            if(playerHasWon(board) == 'x') {
+            if (playerHasWon(board) == 'x') {
                 System.out.println(p1 + " has won!");
                 gameEnded = true;
-            } else if(playerHasWon(board) == 'o') {
+            } else if (playerHasWon(board) == 'o') {
                 System.out.println(p2 + " has won!");
                 gameEnded = true;
             } else {
 
-                if(boardIsFull(board)) {
+                if (boardIsFull(board)) {
                     System.out.println("It's a tie!");
                     gameEnded = true;
                 } else {
@@ -135,9 +134,9 @@ public class TicTacToe {
 
     public static void drawBoard(char[][] board) {
         System.out.println("Board:");
-        for(int i = 0; i < 3; i++) {
+        for (int i = 0; i < 3; i++) {
 
-            for(int j = 0; j < 3; j++) {
+            for (int j = 0; j < 3; j++) {
                 System.out.print(board[i][j]);
             }
             //This print statement makes a new line so that each row is on a separate line
@@ -148,24 +147,24 @@ public class TicTacToe {
     public static char playerHasWon(char[][] board) {
 
         //Check each row
-        for(int i = 0; i < 3; i++) {
-            if(board[i][0] == board[i][1] && board[i][1] == board[i][2] && board[i][0] != '-') {
+        for (int i = 0; i < 3; i++) {
+            if (board[i][0] == board[i][1] && board[i][1] == board[i][2] && board[i][0] != '-') {
                 return board[i][0];
             }
         }
 
         //Check each column
-        for(int j = 0; j < 3; j++) {
-            if(board[0][j] == board[1][j] && board[1][j] == board[2][j] && board[0][j] != '-') {
+        for (int j = 0; j < 3; j++) {
+            if (board[0][j] == board[1][j] && board[1][j] == board[2][j] && board[0][j] != '-') {
                 return board[0][j];
             }
         }
 
         //Check the diagonals
-        if(board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[0][0] != '-') {
+        if (board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[0][0] != '-') {
             return board[0][0];
         }
-        if(board[2][0] == board[1][1] && board[1][1] ==  board[0][2] && board[2][0] != '-') {
+        if (board[2][0] == board[1][1] && board[1][1] == board[0][2] && board[2][0] != '-') {
             return board[2][0];
         }
 
@@ -175,9 +174,9 @@ public class TicTacToe {
     }
 
     public static boolean boardIsFull(char[][] board) {
-        for(int i = 0; i < 3; i++) {
-            for(int j = 0; j < 3; j++) {
-                if(board[i][j] == '-') {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (board[i][j] == '-') {
                     return false;
                 }
             }
@@ -185,7 +184,4 @@ public class TicTacToe {
         return true;
     }
 }
-
-
-
 
