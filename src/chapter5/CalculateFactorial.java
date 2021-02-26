@@ -8,15 +8,14 @@ package chapter5;
 public class CalculateFactorial {
     public static void main(String[] args) {
 
-        long counter;
         long factorial = 1;
 
-        for(counter = 1; counter <= 20; counter++) {
+        for(long counter = 2; counter <= 20; counter += 2) {
             System.out.println(counter);
             factorial *= counter;
 
         }
-        System.out.print(factorial);
+        System.out.print("the factorial of " + "20 is: "  + factorial);
 
     }
 }

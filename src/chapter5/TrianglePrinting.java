@@ -15,12 +15,13 @@ public class TrianglePrinting {
         int row;
         int column;
 
-        for (column = 1; column <= 10; column--) {
-            for (row = 0; row < column; row--) {
+        for (column = 0; column <= 10; column++) {
+            System.out.println("*");
+            System.out.println(" ");
+            for (row = 0; row<10; row--){
                 System.out.print("*");
+                break;
             }
-
-            System.out.println();
         }
 
     }

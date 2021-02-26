@@ -11,6 +11,14 @@ public class ComparePortionOfStrings {
     private int index;
     private int noOfChar;
 
+    public ComparePortionOfStrings(String input, int index, int noOfChar) {
+        this.input = input;
+        this.index = index;
+        this.noOfChar = noOfChar;
+    }
+
+    public ComparePortionOfStrings() {
+    }
 
     public String getInput() {
         return input;
