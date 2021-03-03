@@ -6,24 +6,21 @@ package chapter5;
 import java.util.Scanner;
 
 public class SmallestValue {
+    private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
 
-        Scanner input = new Scanner(System.in);
-
-        int digit;
+        //Scanner input = new Scanner(System.in);
+        int digit = 0;
         int counter;
         int smallestNumber = 0;
         int initialNumber;
 
         System.out.println("Enter a digit to know the number of input to display");
         initialNumber = input.nextInt();
-
+        smallestNumber = initialNumber;
 
         for (counter = 1; counter < initialNumber; counter++) {
-
-            smallestNumber = initialNumber;
-
 
             System.out.println("Enter next digit");
             digit = input.nextInt();
@@ -32,8 +29,10 @@ public class SmallestValue {
                 smallestNumber = digit;
             }
 
+
         }
         System.out.printf("Smallest number is %d\n", smallestNumber);
 
     }
 }
+
