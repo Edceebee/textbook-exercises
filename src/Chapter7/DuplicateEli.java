@@ -39,6 +39,8 @@ public class DuplicateEli {
             printUniqueNumbers();
         }
         counter++;
+       
+        printUniqueNumbers();
 
     }
 
