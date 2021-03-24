@@ -13,18 +13,35 @@ the verbs "drove", "jumped", "ran", "walked" and "skipped"; the preposition arra
 contain the prepositions "to", "from", "over", "under" and "on".
  */
 
-public class RandomSentenceGenerator {
-    public static void main(String[] args) {
-        String []article = {"the", "a", "one", "some", "any"};
-        String []noun = {"boy", "girl", "dog", "town", "car"};
-        String []verb = {"drove", "jumped", "ran", "walked", "skipped"};
-        String []preposition = {"to", "from", "over", "under", "on"};
+import java.util.Random;
 
-        generateSentence(article, noun, verb, preposition );
+class RandomSentenceGenerator{
+    private static String[] article ={"the","a","one","some","any"};
+    private static String[] noun={" boy"," girl"," dog"," town"," car"};
+    private static String[] verb={" drove"," jumped"," ran"," walked","    skipped"};
+    private static String[] preposition={" to"," from"," over"," under"," on"};
+
+
+    public static void main(String args[]){
+        //order to make a sent: a,n,v,p,a,n
+
+        System.out.println("the sentences picked at random are:");
+        System.out.println();
+        //loop to generate 20 sentences
+        for(int i=0;i<=9;i++){
+            System.out.println(makeSentence());
+        }
     }
 
-    private static void generateSentence(String[] article, String[] noun, String[] verb, String[] preposition) {
+    public static String makeSentence(){
+        Random rand = new Random();
+        int[] index = new int[6];
+        String sent = new String();
 
+        for(int i=0;i<6;i++){
+            index[i]= rand.nextInt(5);
+        }
+        sent = sent.concat(article[index[0]].concat(noun[index[1]].concat(verb[index[2]].concat(preposition[index[3]].concat(article[index[4]].concat(noun[index[5]]))))));
+        return sent;
     }
-
 }
