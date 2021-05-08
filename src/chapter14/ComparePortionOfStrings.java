@@ -7,41 +7,34 @@ package chapter14;
 import java.util.Scanner;
 
 public class ComparePortionOfStrings {
-    private String input;
-    private int index;
-    private int noOfChar;
+    public static void main(String[] args) {
 
-    public ComparePortionOfStrings(String input, int index, int noOfChar) {
-        this.input = input;
-        this.index = index;
-        this.noOfChar = noOfChar;
+        // prompted user input
+        Scanner input = new Scanner(System.in);
+        int firstIndex;
+        int secondIndex;
+
+        System.out.print("Enter First String:"); // prompt user
+        String stringNumberOne = input.next(); // assigns stringNumberOne to user input
+        System.out.print("Enter Second String:"); // prompt
+        String stringNumberTwo = input.next(); // assigns stringNumberTwo to user input
+
+
+        System.out.print("Enter Starting Index for First String:"); // prompt
+        firstIndex = input.nextInt(); // assigns firstIndex to user input
+        System.out.print("Enter Starting Index for Second String:"); // prompt
+        secondIndex = input.nextInt(); // assigns secondIndex to user input
+        System.out.print("Enter Number of Characters to be Compared:"); // prompt
+        int numberCompared = input.nextInt(); // assigns numberCompared to user input
+
+        boolean results = stringNumberOne.regionMatches(firstIndex,
+                stringNumberTwo, secondIndex, numberCompared);
+
+        if (results)
+            System.out.println(true);
+        else
+            System.out.println(false);
     }
 
-    public ComparePortionOfStrings() {
-    }
-
-    public String getInput() {
-        return input;
-    }
-
-    public void setInput(String input) {
-        this.input = input;
-    }
-
-    public int getIndex() {
-        return index;
-    }
-
-    public void setIndex(int index) {
-        this.index = index;
-    }
-
-    public int getNoOfChar() {
-        return noOfChar;
-    }
-
-    public void setNoOfChar(int noOfChar) {
-        this.noOfChar = noOfChar;
-    }
 }
 

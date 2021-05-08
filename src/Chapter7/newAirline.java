@@ -1,4 +1,4 @@
-package Chapter7.AirlineComposition;
+package Chapter7;
 
 import java.util.Scanner;
 
