@@ -5,5 +5,7 @@ package chapter14;
         to produce good limericks is a challenging problem, but the result will be worth the effort! */
 
 public class Limericks {
+    private static String[] sentence1 ={"My name is Star boy"};
+
 
 }
