@@ -46,8 +46,8 @@ public class DuplicateEli {
 
 
     private static boolean isUnique(int number) {
-        for (int i = 0; i < myArray.length; i++) {
-            if (myArray[i] == number)
+        for (int j : myArray) {
+            if (j == number)
                 return true;
 
         }
@@ -56,7 +56,7 @@ public class DuplicateEli {
 
     private static void printUniqueNumbers() {
 
-        System.out.printf("\nUnique values:\n");
+        System.out.print("\nUnique values:\n");
 
         System.out.print(myArray[0] + " ");
 

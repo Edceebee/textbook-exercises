@@ -6,9 +6,18 @@ package Chapter7;
    with several calls, each with a different number of arguments.*/
 
 
-import static Chapter7.ArrayMultiplication.product;
+import static Chapter7.VariableLength.product;
 
-public class ArrayMultiplication {
+public class VariableLength {
+
+    public static void main(String[] args) {
+
+        int[] array = {1, 2, 3, 4};
+
+        System.out.println("The product of array is " + product(array));
+    }
+
+
 
     public static int product(int... list)
     {
@@ -24,14 +33,13 @@ public class ArrayMultiplication {
     }
 }
 
- class ArrayMultiplicationMain{
-     public static void main(String[] args) {
 
-         int array [] = {1,2,3,4};
 
-         System.out.println("The product of array is " + product(array));
-     }
-     }
+
+
+
+
+
 
 
 
